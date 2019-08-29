@@ -159,8 +159,6 @@ add_labels_to_features <- function(features_data, avail_users, label_data, label
 ############# SET THESE BEFORE RUNNING #####################
 # Folder to save prediction outputs/feature importances
 dirout = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\results\\" 
-# Path to folder with features
-data_dir = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\train_data\\"
 # Path to folder with labels
 label_dir = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\raw_experiment\\"
 # Path to .txt files containing BarChartLit test results
@@ -309,14 +307,15 @@ avail_users = unique(label_data[, "user_id"])
 
 for (window in time_windows) {
   if (cumul_across) {
-    features_dir = paste(data_dir, "across_tasks_new_refined\\", sep="")
+    features_dir = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\train_data\\across_tasks_new_refined\\"
     iter_arr = seq(1, 15, 1)
   } else if (full_window) {
-    features_dir = paste(data_dir, "train_data\\", sep="")
+    features_dir = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\train_data\\across_tasks_new_refined\\"
     iter_arr = seq(15, 15, 1)
+    features_dir = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\train_data\\"
   } else {
     # Cumulative within
-    features_dir = paste(data_dir, "cumulative_new_withintask_refined\\", sep="")
+    features_dir = "C:\\Users\\tracker2-admin\\Desktop\\rcode\\train_data\\cumulative_new_withintask_refined\\"
     iter_arr = seq(left_idx, right_idx, 1)
   }
   for(slice in iter_arr) {
