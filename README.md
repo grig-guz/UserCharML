@@ -6,6 +6,12 @@ Place the EMDAT output in the following format:
   - cumulative_within/
   - cumulative_across/
   - full_window/
+The output will be stored in the following format:
+- results/
+  - predict-taskchar_result_cumulative_1_9.csv
+  - ...
+  - predict-taskchar_result_fullwindow.csv
+  - predict-taskchar_result_across.csv
 ## Script parameters
 Within the script, specify the following parameters:
 - dirout - path to folder to store results in.
