@@ -22,5 +22,7 @@ Within the script, specify the following parameters:
 - msnv_dependent - list of mmd-dependent characteristics to predict.
 - models - list of models whose output needs to be stored.
 - metrics - list of metrics to store.
+- machine_id (1, 2, 3, 4, 5, or 6, for cumulative-within only) - specifies for which subset of data the current process will generate the output, i.e., for machine_id = 1 it will generate output for timesteps 1 to 9, for machine_id = 2 the output will be for timesteps 10 to 19 etc.
+
 ## Running
 Run within RStudio/command line.
