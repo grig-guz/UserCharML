@@ -26,3 +26,6 @@ Within the script, specify the following parameters:
 
 ## Running
 Run within RStudio/command line.
+
+## Plotting results
+Code for plotting works for cumulative-within and cumulative-across regimes. Follow the steps in plotting.ipyib, which lets you specify the regime, where to load the data from and which classifiers to plot results for. 
